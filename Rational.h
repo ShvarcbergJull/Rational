@@ -18,6 +18,8 @@ public:
 
 	Rational operator +(const Rational& r) const;
 
+    Rational operator *(const Rational& r) const;
+
 	Rational& operator /(const Rational& r);
 
 	Rational operator -() const;
@@ -29,10 +31,13 @@ public:
 
 	bool operator ==(const Rational& r) const;
 	bool operator !=(const Rational& r) const;
+	bool operator <(Rational& r);
+	
 
 	operator int() const;
 	operator double() const;
 
+	Rational srt();
 };
 
 #endif // !_RATIONAL_H
