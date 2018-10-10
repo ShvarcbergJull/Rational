@@ -62,11 +62,19 @@ Rational Rational::operator +(const Rational& r) const
 	return res += r;
 }
 
-Rational Rational::operator *(const Rational& r) const
+Rational Rational::operator *(const Rational& r)
 {
 	Rational res(*this);
 
 	return res *= r;
+}
+
+Rational Rational::operator *(const int& n)
+{
+	Rational res(*this);
+	res.numer *= n;
+	simplify();
+	return res;
 }
 
 Rational& Rational::operator /(const Rational& r)
@@ -75,6 +83,14 @@ Rational& Rational::operator /(const Rational& r)
 	denom *= r.numer;
 	simplify();
 	return *this;
+}
+
+Rational& Rational::operator /(const int& n)
+{
+	Rational res(*this);
+	res.denom *= n;
+	simplify();
+	return res;
 }
 
 Rational Rational::operator -() const
