@@ -60,12 +60,10 @@ int main()
 
 	cout << "Уравнение: " << a << "x^2 + (" << b << ")x + (" << c << ") = 0" << endl;
 
-	Rational cs(4);
+	Rational cs;
 
-	d = b * b - cs * a * c;
+	d = b * b - (a * 4) * c;
 
-	cs.numer = 0;
-	cs.denom = 1;
 	cout << endl << d << endl;
 	if (d < cs)
 	{
@@ -76,9 +74,9 @@ int main()
  		Rational s;
 		s = d.srt();
 
-		cs.numer = 2;
-		x1 = (-b + s) / cs / a;
-		x2 = (-b - s) / cs / a;
+		x1 = (-b + s) / 2 / a;
+		x2 = (-b - s) / 2 / a;
+
 		if (x1 != x2)
 			cout << "Ответ: x1=" << x1 << ", x2=" << x2 << endl;
 		else
