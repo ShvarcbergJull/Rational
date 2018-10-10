@@ -18,9 +18,13 @@ public:
 
 	Rational operator +(const Rational& r) const;
 
-    Rational operator *(const Rational& r) const;
+    Rational operator *(const Rational& r);
+
+	Rational operator *(const int& n);
 
 	Rational& operator /(const Rational& r);
+
+	Rational& operator /(const int& n);
 
 	Rational operator -() const;
 
