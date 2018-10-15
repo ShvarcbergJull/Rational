@@ -18,9 +18,13 @@ public:
 
 	Rational operator +(const Rational& r) const;
 
+	Rational operator +(const int& x) const;
+
     Rational operator *(const Rational& r);
 
 	Rational operator *(const int& n);
+
+	Rational operator *(const double& n);
 
 	Rational& operator /(const Rational& r);
 
@@ -35,6 +39,8 @@ public:
 
 	bool operator ==(const Rational& r) const;
 	bool operator !=(const Rational& r) const;
+	bool operator ==(const int& r) const;
+	bool operator !=(const int& r) const;
 	bool operator <(Rational& r);
 	
 
