@@ -74,8 +74,12 @@ int main()
  		Rational s;
 		s = d.srt();
 
-		x1 = (-b + s) / 2 / a;
-		x2 = (-b - s) / 2 / a;
+		x1 = (-b + s);
+		x1 = x1 / 2;
+		x1 = x1 / a;
+		x2 = (-b - s);
+		x2 = x2 / 2;
+		x2 = x2 / a;
 
 		if (x1 != x2)
 			cout << "Ответ: x1=" << x1 << ", x2=" << x2 << endl;
@@ -84,5 +88,6 @@ int main()
 	}
 
 	system("pause");
+
 	return 0;
 }
